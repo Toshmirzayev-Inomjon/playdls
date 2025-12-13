@@ -2,7 +2,7 @@
 import telebot
 from telebot import types
 from config import BOT_TOKEN, ADMINS
-from menus import main_menu, social_inline, send_photo, coins_menu, gems_menu, season_menu, stadium_kb, club_kb, sticker_kb
+from menus import main_menu, main_social_inline,telegram_inline_menu , send_photo, coins_menu, gems_menu, season_menu, stadium_kb, club_kb, sticker_kb
 from donate import quick_donate, create_order_and_notify, ITEMS
 from admin_panel import admin_keyboard, list_orders, admin_update_from_callback,handle_admin_message
 from crm import get_order
@@ -37,8 +37,13 @@ def handler(message):
 
     # IJTIMOIY TARMOQLAR
     if text == "🌐 Ijtimoiy tarmoqlar":
-        bot.send_message(chat, "Ijtimoiy tarmoqlarimiz:", reply_markup=social_inline())
+        bot.send_message(chat, "Ijtimoiy tarmoqlarimiz:", reply_markup=main_social_inline())
         return
+
+    if text ==  "Telegram 📱":
+        bot.send_message(chat, "Ijtimoiy tarmoqlarimiz:", reply_markup=telegram_inline_menu())
+        return
+
 
     # DONAT SERVIS (matn orqali ichki menyu chiqaramiz)
     if text == "🛍 Donat Servis" or text == "💰 Donat bo‘limi":
@@ -251,5 +256,7 @@ def callback_query(call):
     return
 
 if __name__ == "__main__":
-    print("Bot ishga tushmoqda...")
-    bot.infinity_polling()
+    print("Bot ishga tushdi")
+    bot.infinity_polling(skip_pending=True)
+
+

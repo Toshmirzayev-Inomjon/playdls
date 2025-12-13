@@ -6,15 +6,29 @@ def main_menu():
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
     keyboard.row("🌐 Ijtimoiy tarmoqlar", "🛍 Donat Servis","Tanga🪙-olmos💎 yigʻdirish")
     keyboard.add("🏟 Stadion", "⚡ Dream Club","🎟 Sitikerlar")
-    keyboard.row( "🧑‍💻 admin", "🤖 Bot yaratuvchisi")
+    keyboard.row( "Telegram 📱","🧑‍💻 admin", "🤖 Bot yaratuvchisi")
     return keyboard
 
-def social_inline():
+
+
+
+from telebot import types
+
+def main_social_inline():
     kb = types.InlineKeyboardMarkup()
-    kb.add(types.InlineKeyboardButton("Telegram 📲", url="https://t.me/toshmirzay_inomjon"))
     kb.add(types.InlineKeyboardButton("Instagram 📸", url="https://www.instagram.com/inomjon.lvl/"))
-    kb.add(types.InlineKeyboardButton("YouTube ▶️", url="https://youtube.com/@new_rek_kanal"))
+    kb.add(types.InlineKeyboardButton("YouTube ▶️", url="https://youtube.com/@dls_yangiliklari-n5o"))
     return kb
+
+
+def telegram_inline_menu():
+    kb = types.InlineKeyboardMarkup()
+    kb.add(types.InlineKeyboardButton("Kanal 📢", url="https://t.me/DLS25KANAL"))
+    kb.add(types.InlineKeyboardButton("Guruh 💬", url="https://t.me/DLS_RASMIY_GRUPPASI"))
+    kb.add(types.InlineKeyboardButton("Akkountlar 🔑", url="https://t.me/dlsakkountlar"))
+    return kb
+
+
 
 # Donat bo'limlari uchun ichki inline menyular (variantlar)
 def coins_menu():
