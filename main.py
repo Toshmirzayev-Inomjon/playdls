@@ -97,7 +97,7 @@ def handler(message):
         return
     if text == "Tanga🪙-olmos💎 yigʻdirish":
         message_text = (
-            "tanga olmoz yig'dirish yangitdan yulga quydim hozirda eng kam narxdagi shu"
+            "tanga olmoz yig'dirish yangitdan yulga quydim hozirda eng kam narxdagi shu\n"
             "murojat uchun: @Bahrom777 ☑️"
         )
         send_photo(bot, chat, "Tanga.jpg", message_text)
