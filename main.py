@@ -117,7 +117,7 @@ def handler(message):
                                "Admin oling demang❌\n"
                                "Akkimni sotib oling demang❌\n"
                                "Koʻp savollar bermang va savollaringizgizga bot orqali javobni olishga harakat qiling❗️\n"
-                               "Bot:🤖 @PLAYDLSNEWBOT 🤖"
+                               "Bot:🤖 @playdls26new_bot 🤖"
                          )
         return
 
